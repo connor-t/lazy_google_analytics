@@ -12,6 +12,8 @@ module LazyGoogleAnalytics
                     :client_id,
                     :scope,
                     :profile_id,
-                    :email
+                    :email,
+                    :application_name,
+                    :application_version
   end
 end
