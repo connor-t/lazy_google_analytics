@@ -10,7 +10,8 @@ module LazyGoogleAnalytics
     end
 
     def authorize
-      @client = Google::APIClient.new()
+      config = LazyGoogleAnalytics::Config
+      @client = Google::APIClient.new(application_name: config.application_name,application_version: config.application_version)
       @client.authorization = @asserter.authorize()
       @analytics = @client.discovered_api("analytics",'v3')
     end
